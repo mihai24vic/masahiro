@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MasahiroApp: App {
+    private let dependencies = AppDependencies()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView(dependencies: dependencies)
+                .preferredColorScheme(.dark)
         }
     }
 }
